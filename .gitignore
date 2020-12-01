@@ -1,0 +1,9 @@
+iFood/iFood.Mercado.API/obj/*
+iFood/iFood.Mercado.API/bin/*
+iFood/iFood.Mercado.Domain/obj/*
+iFood/iFood.Mercado.Domain/bin/*
+iFood/iFood.Mercado.Infrastructure/obj/*
+iFood/iFood.Mercado.Infrastructure/bin/*
+iFood/iFood.Mercado.Tests/obj/*
+iFood/iFood.Mercado.Tests/bin/*
+iFood/iFood.Mercado.UI/node_modules/*
