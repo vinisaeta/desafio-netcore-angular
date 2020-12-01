@@ -1,0 +1,10 @@
+<div class="i-form-field" [ngClass]="{'top': position == 'top', 'left': position == 'left'}">
+    <label>
+        <span>{{ label }}</span>
+        <span class="mandatory" *ngIf="mandatory">*</span>
+    </label>
+    <div class="i-form-field-container">
+        <ng-content></ng-content>
+    </div>
+
+</div>

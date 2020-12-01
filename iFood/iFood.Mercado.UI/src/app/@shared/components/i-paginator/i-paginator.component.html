@@ -1,0 +1,11 @@
+<div class="i-paginator">
+    <i-circle-button (click)="onPrevious()" [disabled]="page == 0">
+        <mat-icon>chevron_left</mat-icon>
+    </i-circle-button>
+
+    <div class="i-paginator-summary">{{ start }} - {{ end }} de {{ total }}</div>
+
+    <i-circle-button (click)="onNext()" [disabled]="end == total">
+        <mat-icon>chevron_right</mat-icon>
+    </i-circle-button>
+</div>

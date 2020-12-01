@@ -1,0 +1,82 @@
+@import 'tools';
+@import 'settings';
+@import '~@angular/material/theming';
+@include mat-core();
+
+@mixin field() {
+    padding: 0 12px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    border: 0;
+    border-radius: 4px;
+    width: 100%;
+    border: 2px solid mat-color($ifood-grey,200);
+    background: mat-color($ifood-red, A100);
+
+    &:focus{
+        border: 2px solid mat-color($ifood-red,500);
+    }
+}
+
+:host {
+
+    .i-form-field {
+        margin-bottom: 10px;
+        width: 100%;
+
+        &.top {
+            @include column(flex-start, flex-start);
+
+            label {
+                padding: 3px 5px;
+                font-size: 14px;
+                font-weight: 400;
+
+                .mandatory {
+                    color: mat-color($ifood-red, 500);
+                    padding: 0 3px;
+                }
+            }
+        }
+
+        &.left {
+            margin-bottom: 0;
+            @include row(center, flex-start);
+
+            label {
+                padding: 3px 5px;
+                font-weight: 500;
+                font-size: 10px;
+                color: rgba(0, 0, 0, 0.54);
+                margin: 0 10px;
+                text-transform: uppercase;
+            }
+        }
+
+        .i-form-field-container {
+            width: 100%;
+        }
+
+        ::ng-deep .xs {
+            width: 160px
+        }
+
+        ::ng-deep .sm {
+            width: 200px
+        }
+
+        ::ng-deep .md {
+            width: 340px
+        }
+
+        ::ng-deep .lg {
+            width: 420px
+        }
+
+        ::ng-deep mat-select,
+        ::ng-deep input {
+            @include field();
+        }
+    }
+}

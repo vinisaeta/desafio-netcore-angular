@@ -1,0 +1,53 @@
+<main>
+
+    <!-- CABEÇALHO -->
+    <i-header icon="market" title="Catálogo de Produtos">
+        <i-header-subtitle>
+            <span>Início / Produtos</span>
+        </i-header-subtitle>
+        <i-header-content>
+            <button mat-flat-button color="primary" (click)="adicionar()" class="i-button-primary">Novo Produto</button>
+        </i-header-content>
+    </i-header>
+    <!--/ CABEÇALHO -->
+
+    <mat-divider></mat-divider>
+
+    <!-- BARRA DE BUSCA -->
+    <i-search-bar>
+        <i-search [(ngModel)]="nomeDoProduto" (filter)="pesquisar($event)" placeholder="Digite o nome do produto que deseja encontrar" [icon]="true"></i-search>
+    </i-search-bar>
+    <!--/ BARRA DE BUSCA -->
+
+    <!-- PRODUTOS -->
+    <div class=produtos *ngIf="produtos.itens.length > 0">
+
+        <div class="produtos-container">
+            <i-produto-card *ngFor="let produto of produtos.itens" [nome]="produto.nome" [preco]="produto.valorDeVenda" [foto]="produto.imagem" (click)="alterar(produto)"></i-produto-card>
+        </div>
+
+
+        <i-paginator [total]="produtos.total" [page]="produtos.pagina" [limit]="produtos.limite"
+        (previous)="anterior()" (next)="proxima()"></i-paginator>
+
+    </div>
+    <!--/ PRODUTOS -->
+
+    <i-empty-state *ngIf="produtos.itens?.length == 0 && nomeDoProduto && !loading" icon="search"
+        label="Nenhum produto foi encontrado"
+        description="Tente ajustar os filtros da pesquisa para encontrar o que deseja">
+    </i-empty-state>
+
+    <i-empty-state *ngIf="produtos.itens?.length == 0 && !nomeDoProduto && !loading" icon="market"
+        label="Nenhum produto cadastrado" description="Você não tem nenhum produto cadastrado ainda">
+
+        <i-empty-state-action>
+            <button mat-flat-button color="primary" (click)="adicionar()">Novo Produto</button>
+        </i-empty-state-action>
+    </i-empty-state>
+
+</main>
+
+<button mat-icon-button aria-label="adicionar" id="adicionar-mobile" (click)="adicionar()">
+    <mat-icon>add</mat-icon>
+  </button>

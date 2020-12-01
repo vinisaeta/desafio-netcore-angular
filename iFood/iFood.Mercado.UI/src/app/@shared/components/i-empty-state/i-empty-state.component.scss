@@ -1,0 +1,52 @@
+@import 'tools';
+@import 'settings';
+@include mat-core();
+
+:host {
+    @include column(center, center);
+    flex-grow: 1;
+
+    .i-empty-state {
+        width: 100%;
+        border: 2px dashed mat-color($ifood-grey, 200);
+        border-radius: 4px;
+        padding: 32px;
+        @include column(center, center);
+
+        .i-empty-state-title {
+            margin: 0 !important;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .i-empty-state-description {
+            color: mat-color($ifood-grey, A100);
+        }
+
+        .i-empty-state-icon {
+            background: mat-color($primary, 50);
+            width: 105px;
+            height: 105px;
+            min-width: 105px;
+            min-height: 105px;
+            border-radius: 50%;
+            margin-bottom: 12px;
+            @include row(center, center);
+
+            mat-icon {
+                width: 58px;
+                height: 58px;
+                color: mat-color($primary, 500);
+            }
+        }
+
+        .i-empty-state-action {
+            margin-top: 16px;
+
+            ::ng-deep button {
+                margin-left: 0;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,4 @@
+<div class="i-search">
+    <mat-icon class="search" svgIcon="search" *ngIf="icon"></mat-icon>
+    <input [(ngModel)]="textValue" (ngModelChange)="updateChanges()" (keyup)="onSearch(textValue)" type="text" [placeholder]="placeholder" >
+</div>

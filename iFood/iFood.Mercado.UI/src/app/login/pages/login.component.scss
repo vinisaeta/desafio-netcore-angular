@@ -1,0 +1,131 @@
+@import 'settings.scss';
+@import 'tools.scss';
+@include mat-core();
+
+
+:host {
+
+    nav {
+        position: absolute;
+        padding: 24px;
+
+        @include screen('sm'){
+            position: relative;
+            padding: 12px 24px;
+            @include elevation();
+        }
+
+        img {
+            width: 90px;
+
+            @include screen('sm'){
+                width: 60px;
+            }
+        }
+    }
+
+    .login-page {
+        @include row(center, center);
+
+        .login-page-illustration-container {
+            flex: 1;
+            height: 100vh;
+            @include row(center, center);
+            background-color: mat-color($primary, 50);
+
+            @include screen('sm'){
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                max-width: 450px;
+                margin-left: 24px;
+            }
+        }
+
+        .login-page-form-container {
+            flex: 1;
+            height: 100vh;
+            @include row(center, flex-start);
+
+            @include screen('sm'){
+                height: calc(100vh - 62px);
+                background-color: mat-color($primary, 50);
+                @include row(center, center);
+            }
+
+            img {
+                height: 100vh;
+
+                @include screen('sm'){
+                    display: none;
+                }
+            }
+
+            form {
+                margin-left: -200px;
+                background: mat-color($primary, A100);
+                width: 390px;
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05), 0px 4px 16px rgba(0, 0, 0, 0.06);
+                border-radius: 8px;
+                padding: 32px 42px;
+
+                @include screen('sm'){
+                    margin-left: 0px;
+                    width: 335px;
+                    padding: 36px 36px;
+                }
+
+                .title {
+                    font-size: 30px;
+                    font-weight: 500;
+                    line-height: 36px;
+                    padding: 12px 20px 16px 20px;
+
+                    @include screen('sm'){
+                        font-size: 26px;
+                        font-weight: 500;
+                        line-height: 30px;
+                        padding: 0px 10px 10px 10px;
+                    }
+
+                    .first-line{
+                        margin-left: 30px;
+                    }
+
+                    .second-line{
+                        font-size: 36px;
+                        text-transform: uppercase;
+                        text-align: right;
+                        line-height: 42px;
+
+                        @include screen('sm'){
+                            font-size: 32px;
+                            line-height: 36px;
+                        }
+                    }
+                }
+
+                p {
+                    margin-top: 16px;
+                    text-align: center;
+                    font-weight: normal;
+                    color: mat-color($ifood-grey, A100);
+                    margin-bottom: 24px;
+
+                    @include screen('sm'){
+                        margin-top: 12px;
+                        font-size: 14px;
+                    }
+                }
+
+                button {
+                    margin-top: 12px;
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,95 @@
+ @import 'settings.scss';
+ @import 'tools.scss';
+
+ @include mat-core();
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ a {
+    text-decoration: none;
+     font-weight: 500;
+     color: mat-color($ifood-grey, A700);
+   }
+
+a:link {
+    font-weight: 500;
+    text-decoration: none;
+    color: mat-color($ifood-grey, A700);
+}
+
+ img,
+ fieldset {
+     border: 0;
+ }
+
+ body,
+ html {
+     height: 100%;
+     width: 100%;
+ }
+
+ body {
+     background: mat-color($ifood-red, A100);
+     font-family: 'Rubik', sans-serif;
+     font-weight: 500;
+     font-style: normal;
+     line-height: 1.42857142857143;
+     -ms-overflow-style: -ms-autohiding-scrollbar;
+     color: mat-color($ifood-grey, A700);
+ }
+
+
+ ul {
+     list-style: none
+ }
+
+
+ button,
+ input {
+     outline: none;
+ }
+
+ button[disabled] {
+     opacity: 0.5;
+ }
+
+ main {
+     padding: 30px 24px;
+ }
+
+ .center {
+     text-align: center;
+ }
+
+ .right {
+     text-align: right;
+ }
+
+ .i-button-primary {
+    @include button();
+    border: 2px solid  mat-color($primary, 500);
+    background: mat-color($primary, 500);
+    color: mat-contrast($primary, 500);
+
+    &:hover {
+        background: mat-color($primary, 600);
+        cursor: pointer;
+    }
+}
+
+.i-button-secondary {
+    @include button();
+    border: 2px solid mat-color($ifood-grey, A100);
+    background: transparent;
+    color: mat-color($ifood-grey, A100);
+
+    &:hover {
+        color: mat-color($primary, 500);
+        border: 2px solid mat-color($ifood-red, 500);
+        cursor: pointer;
+    }
+}

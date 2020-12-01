@@ -1,0 +1,24 @@
+<nav>
+    <div class="container">
+
+        <button mat-icon-button color="accent" type="button" (click)="abrirMenu()" aria-label="Abrir menu" id="menu-mobile">
+            <mat-icon>menu</mat-icon>
+          </button>
+
+        <img src="/assets/img/logo-ifood-red.svg" alt="iFood">
+
+        <ul>
+            <li>
+                <a routerLink="'produtos'">
+                    <mat-icon svgIcon="market"></mat-icon>
+                    <span>Produtos</span>
+                </a>
+            </li>
+            <li (click)="sair()">
+                <mat-icon svgIcon="signout"></mat-icon>
+                <span>Sair</span>
+            </li>
+        </ul>
+
+    </div>
+</nav>

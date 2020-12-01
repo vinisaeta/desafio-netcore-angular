@@ -1,0 +1,135 @@
+@import 'settings';
+@import 'tools';
+@include mat-core();
+
+:host {
+
+    .i-header-content .i-button-primary, .i-header-content .i-button-secondary {
+        @include screen(sm) {
+            display: none;
+        }
+    }
+
+    section {
+        margin-top: 8px;
+        @include row(flex-start, flex-start);
+
+        @include screen(sm) {
+            @include column(flex-start, flex-start);
+        }
+
+        .form-fields {
+            padding-right: 12px;
+            flex: 1;
+
+            @include screen(sm) {
+                width: 100%;
+                padding: 0;
+            }
+
+            .preco {
+                width: 220px;
+
+                @include screen(sm) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .file-upload {
+            flex: 1;
+            padding-left: 12px;
+
+            @include screen(sm) {
+                padding: 0;
+                width: 100%;
+                margin-top: 16px;;
+            }
+
+            img {
+                border-radius: 5px;
+                border: 2px solid mat-color($ifood-grey, 200);
+                width: 100%;
+            }
+
+            .container-upload {
+                width: 100%;
+                border: 2px dashed mat-color($ifood-grey, 200);
+                border-radius: 4px;
+                padding: 32px;
+                @include column(center, center);
+
+                &:hover {
+                    cursor: pointer;
+                    border: 2px dashed mat-color($ifood-red, 500);
+                }
+
+                .thumbnail {
+                    background: mat-color($primary, 50);
+                    width: 105px;
+                    height: 105px;
+                    min-width: 105px;
+                    min-height: 105px;
+                    border-radius: 50%;
+                    margin-bottom: 12px;
+                    @include row(center, center);
+
+                    mat-icon {
+                        width: 58px;
+                        height: 58px;
+                        color: mat-color($primary, 500);
+                    }
+                }
+
+                p {
+                    color: mat-color($ifood-grey, A100);
+                    margin-top: 16px;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+            .image-bar {
+
+                padding: 6px;
+                @include row(center, center);
+
+                button {
+                    background: mat-color($primary, A100);
+                    border: 2px solid mat-color($ifood-grey, 200);
+                    padding: 4px;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    color: mat-color($ifood-grey, A100);
+                    margin: 0 6px;
+
+                    &:hover {
+                        color: mat-color($primary, 500);
+                        border: 2px solid mat-color($ifood-red, 500);
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            #file-upload-field {
+                display: none;
+            }
+        }
+    }
+
+    #menu-mobile {
+        margin-top: 16px;
+        width: 100%;
+        display: none;
+
+        @include screen(sm) {
+            display: block;
+        }
+
+        button {
+            margin: 12px 0px;
+            width: 100%;
+        }
+    }
+}

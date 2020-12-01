@@ -1,0 +1,12 @@
+@import 'settings';
+@include mat-core();
+
+:host {
+
+    .i-error-message {
+        font-size: 11px;
+        margin-top: 3px;
+        padding: 0 4px;
+        color: mat-color($ifood-red, 500);
+    }
+}

@@ -1,0 +1,67 @@
+@import 'tools';
+@import 'settings';
+@include mat-core();
+
+::ng-deep .mat-dialog-container {
+    padding: 0 !important;
+
+}
+
+:host {
+    @include column(center, center);
+    height: 100%;
+
+    .i-confirm-wrapper {
+        @include column(center, center);
+        margin: 30px;
+
+        .i-confirm-thumbnail {
+            background: mat-color($ifood-red, 50);
+            margin-bottom: 15px;
+            @include row(center, center);
+            @include circle(155px);
+
+            mat-icon{
+                width: 80px;
+                height: 80px;
+                color: mat-color($ifood-red, 500);
+            }
+        }
+
+        .i-confirm-title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .i-confirm-message {
+            text-align: center;
+            font-size: 16px;
+            color: mat-color($ifood-grey, A100);
+            padding: 5px 0 25px 0;
+            font-weight: 500;
+        }
+
+        .i-confirm-footer {
+            @include row(center, center);
+
+            button {
+                width: 140px;
+                margin: 6px !important;
+                height: 40px;
+
+                &.yes {
+                    background: mat-color($primary, 500);
+                    color: mat-contrast($primary, 500);
+                }
+
+                &.cancel {
+                    background: mat-color($ifood-grey, 100);
+                    color: mat-contrast($ifood-grey, 100);
+                }
+            }
+
+
+        }
+    }
+}

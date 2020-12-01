@@ -1,0 +1,31 @@
+<mat-drawer-container class="drawer-container" autosize>
+
+    <mat-drawer #drawer mode="push">
+        <div class="menu-container">
+            <div class="logo">
+                <img src="/assets/img/logo-ifood-red.svg" alt="iFood">
+            </div>
+
+            <ul>
+                <li>
+                    <a routerLink="'produtos'">
+                        <mat-icon svgIcon="market"></mat-icon>
+                        <span>Produtos</span>
+                    </a>
+                </li>
+                <li (click)="sair()">
+                    <mat-icon svgIcon="signout"></mat-icon>
+                    <span>Sair</span>
+                </li>
+            </ul>
+        </div>
+    </mat-drawer>
+
+    <div class="main-container">
+        <i-navbar (menu)="drawer.toggle()"></i-navbar>
+        <div class="content-container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</mat-drawer-container>

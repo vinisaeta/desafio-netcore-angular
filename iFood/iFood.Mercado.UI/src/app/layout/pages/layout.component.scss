@@ -1,0 +1,65 @@
+@import 'settings';
+@import 'tools';
+@include mat-core();
+
+:host {
+
+    .drawer-container{
+        height: 100vh;
+        width: 100%;
+        background-color: mat-color($ifood-grey, 50);
+
+        .menu-container{
+            width: 220px;
+            padding: 32px;
+            @include column(flex-start, flex-start);
+
+            .logo{
+                width: 100%;
+                @include row(center, center);
+
+                img {
+                    width: 80px;
+                }
+            }
+
+            ul {
+                margin-top: 24px;
+                width: 100%;
+
+                li, a {
+                    height: 50px;
+                    @include row(center, flex-start);
+
+                    mat-icon {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 8px;
+                        color: mat-color($primary, 500);
+                    }
+
+                    span {
+                        font-size: 14px;
+                        text-transform: uppercase;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        color: mat-color($primary, 500);
+                    }
+                }
+            }
+
+        }
+
+        .main-container {
+            width: 100%;
+            @include column(flex-start, center);
+
+            .content-container {
+                max-width: 1100px;
+                width: 100%;
+            }
+        }
+    }
+}

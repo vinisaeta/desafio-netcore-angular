@@ -1,0 +1,55 @@
+@import "tools";
+@import "settings";
+@include mat-core();
+
+:host {
+    @include row(center, flex-start);
+
+    .i-header {
+        @include row(center, flex-start);
+        flex-grow: 1;
+        margin-left: 4px;
+
+        mat-icon {
+            color: mat-color($primary, 500);
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .i-header-title {
+            @include row(center, flex-start);
+
+            span {
+                margin: 0 !important;
+                font-size: 24px;
+                font-weight: 500;
+                margin-top: 6px;
+
+                @include screen(sm) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .subtitle {
+            color: mat-color($ifood-grey, A100);
+            padding: 0px 2px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+
+    i-header-content {
+        min-width: 600px !important;
+
+        .i-button-primary,
+        .i-button-secondary {
+            margin-left: 16px !important;
+        }
+    }
+
+    .full {
+        flex: 1;
+    }
+}

@@ -1,0 +1,39 @@
+@import 'tools';
+@import 'settings';
+@include mat-core();
+
+:host {
+    display: flex;
+    width: 100%;
+
+    .i-search {
+        padding: 0 5px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 14px;
+        border: 0;
+        border-radius: 4px;
+        width: 100%;
+        border: 2px solid mat-color($ifood-grey,200);
+        background: mat-color($ifood-red, A100);
+        @include row(center, flex-start);
+
+
+        input {
+            width: 100%;
+            height: 26px;
+            outline: none;
+            border: none;
+        }
+
+        mat-icon {
+            color: mat-color($ifood-grey, A100);
+            width: 24px;
+
+            &.search {
+                margin: 0 7px 0 4px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,10 @@
+<div class="i-empty-state">
+    <div class="i-empty-state-icon">
+        <mat-icon [svgIcon]="icon"></mat-icon>
+    </div>
+    <div class="i-empty-state-title">{{label}}</div>
+    <div class="i-empty-state-description">{{description}}</div>
+    <div class="i-empty-state-action">
+        <ng-content select="i-empty-state-action"></ng-content>
+    </div>
+</div>

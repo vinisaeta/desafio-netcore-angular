@@ -1,0 +1,44 @@
+@import 'settings';
+@import 'tools';
+@include mat-core();
+
+:host {
+
+    .i-button-primary {
+        @include screen(sm) {
+            display: none;
+        }
+    }
+
+    .produtos {
+
+        .produtos-container {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+
+            @include screen(sm) {
+                gap: 0px;
+            }
+        }
+    }
+
+    ::ng-deep .i-empty-state {
+        height: calc(100vh - 290px);
+    }
+
+    #adicionar-mobile {
+        display: none;
+
+        @include screen(sm) {
+            display: block;
+            background: mat-color($primary, 500);
+            color: mat-contrast($primary, 500);
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+        }
+
+    }
+}

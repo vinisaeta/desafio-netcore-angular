@@ -1,0 +1,15 @@
+<div class="i-confirm-wrapper">
+
+        <div class="i-confirm-thumbnail">
+            <mat-icon [svgIcon]="icon"></mat-icon>
+        </div>
+
+        <div class="i-confirm-title">{{ title }}</div>
+        <div class="i-confirm-message">{{ message }}</div>
+
+        <div class="i-confirm-footer">
+            <button (click)="onCancel()" class="i-button-secondary">Cancelar</button>
+            <button color="primary" (click)="onYes()" class="i-button-danger">{{ buttonYes }}</button>
+        </div>
+
+    </div>

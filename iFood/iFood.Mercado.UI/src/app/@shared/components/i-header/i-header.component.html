@@ -1,0 +1,13 @@
+<div class="i-header">
+    <mat-icon [svgIcon]="icon" *ngIf="icon"></mat-icon>
+    <div>
+        <div class="i-header-title">
+            <span>{{ title }}</span>
+        </div>
+        <div class="subtitle">
+            <ng-content select="i-header-subtitle"></ng-content>
+        </div>
+    </div>
+
+</div>
+<ng-content select="i-header-content"></ng-content>

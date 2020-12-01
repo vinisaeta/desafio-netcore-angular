@@ -1,0 +1,28 @@
+@import 'tools';
+@import 'settings';
+@include mat-core();
+
+:host {
+
+    .i-paginator {
+        padding: 10px;
+        @include row(center, center);
+
+        .i-paginator-summary {
+            margin: 0 10px;
+            font-size: 11px;
+        }
+
+        ::ng-deep i-circle-button button {
+
+            &:disabled {
+                opacity: 0.3 !important;
+                &:hover {
+                    cursor: default;
+                }
+            }
+
+            background: mat-color($primary, A100);
+        }
+    }
+}

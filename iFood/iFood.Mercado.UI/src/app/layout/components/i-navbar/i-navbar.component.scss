@@ -1,0 +1,76 @@
+@import 'settings';
+@import 'tools';
+@include mat-core();
+
+:host {
+    width: 100%;
+
+    nav{
+        height: 80px;
+        padding: 0 24px;
+        width: 100%;
+        background-color: mat-color($primary, A100);
+        @include row(center, center);
+        @include elevation();
+
+        @include screen(sm) {
+            padding: 0 16px;
+        }
+
+        .container {
+            padding: 0 24px;
+            max-width: 1100px;
+            width: 100%;
+            @include row(center, flex-start);
+
+            @include screen(sm) {
+                padding: 0;
+            }
+
+            img {
+                width: 60px;
+            }
+
+            ul {
+                width: 100%;
+                @include row(center, flex-end);
+
+                @include screen(sm) {
+                    display: none;
+                }
+
+                li, a {
+                    margin-left: 54px;
+                    @include row(center, flex-start);
+
+                    mat-icon {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 8px;
+                        color: mat-color($primary, 500);
+                    }
+
+                    span {
+                        font-size: 14px;
+                        text-transform: uppercase;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        color: mat-color($primary, 500);
+                    }
+                }
+            }
+
+            #menu-mobile {
+                margin-right: 16px;
+                display: none;
+
+                @include screen(sm) {
+                    display: block;
+                }
+            }
+
+        }
+    }
+}

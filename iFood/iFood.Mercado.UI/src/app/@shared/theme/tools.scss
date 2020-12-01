@@ -1,0 +1,100 @@
+@import 'settings.scss';
+
+/**
+ * Função de responsividade
+ *
+ * Utilizado para tratar os casos de responsividade dos seguintes breakpoints:
+ *
+ *     - sm (small):       max-width: 960px;
+ *     - md (medium):      min-width: 961px and max-width: 1280px;
+ *     - lg (large):       min-width: 1281px and max-width: 1920px;
+ *     - xl (extra large): min-width: 1921px;
+ *
+ * Example:
+ *
+ * @include screen(xs) { display: none; }
+ */
+
+@mixin screen($breakpoints) {
+
+    @if $breakpoints=='sm' {
+        @media only screen and (max-width: 960px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoints=='md' {
+        @media only screen and (min-width: 961px) and (max-width: 1280px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoints=='lg' {
+        @media only screen and (min-width: 1281px) and (max-width: 1920px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoints=='xl' {
+        @media only screen and (min-width: 1921px) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Breakpoint mixin supports: sm, md, lg, xl";
+    }
+}
+/**
+ * Atribui o layout FLEX no formato linha;
+ */
+@mixin row ($x, $y) {
+    display: flex;
+    flex-direction: row;
+    align-items: $x;
+    justify-content: $y;
+}
+
+/**
+ * Atribui o layout FLEX no formato coluna;
+ */
+@mixin column ($x, $y) {
+    display: flex;
+    flex-direction: column;
+    align-items: $y;
+    justify-content: $x;
+}
+
+/**
+ * Define a sombra padrão
+ */
+@mixin elevation() {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/**
+ * Utilizado para arredondar as bordas do elemento até que o mesmo
+ * vire um cículo;
+ */
+
+ @mixin circle($size) {
+    width: $size;
+    min-width: $size;
+    height: $size;
+    min-height: $size;
+    border-radius: 100%;
+}
+
+@mixin button() {
+    padding: 0 30px;
+    border: none;
+    border-radius: 4px;
+    height: 36px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 16px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

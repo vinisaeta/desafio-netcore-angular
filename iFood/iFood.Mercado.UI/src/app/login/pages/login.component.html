@@ -1,0 +1,45 @@
+<nav>
+    <img src="/assets/img/logo-ifood-red.svg" alt="iFood Mercado">
+</nav>
+
+<div class="login-page">
+
+    <div class="login-page-illustration-container">
+        <img src="/assets/img/illustration-delivery.svg" alt="Ilustração">
+    </div>
+
+    <div class="login-page-form-container">
+
+        <img src="/assets/img/curve-pink.svg" alt="">
+
+        <form #f="ngForm" (ngSubmit)="entrar()" novalidate>
+
+            <div class="title">
+                <div class="first-line">Fazendo o</div>
+                <div class="second-line">MERCADO</div>
+                <div class="third-line">chegar até você</div>
+            </div>
+
+            <p>Informe seu login e senha para entrar</p>
+
+            <i-form-field label="Login" [mandatory]="true">
+                <input name="login" type="text" #login="ngModel" [(ngModel)]="usuario.login" required>
+                <i-error [control]="login">
+                    <i-error-message type="required" message="Informe seu usuário de acesso">
+                    </i-error-message>
+                </i-error>
+            </i-form-field>
+
+            <i-form-field label="Senha" [mandatory]="true">
+                <input name="senha" type="password" #senha="ngModel" [(ngModel)]="usuario.senha" required>
+                <i-error [control]="senha">
+                    <i-error-message type="required" message="Informe sua senha de acesso">
+                    </i-error-message>
+                </i-error>
+            </i-form-field>
+
+            <button mat-flat-button color="primary" [disabled]="f.invalid">Entrar</button>
+
+        </form>
+    </div>
+</div>

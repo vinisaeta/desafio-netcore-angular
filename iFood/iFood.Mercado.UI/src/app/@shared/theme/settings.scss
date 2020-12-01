@@ -1,0 +1,75 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$ifood-red: (
+    50 : #fcebea,
+    100 : #f9bbc0,
+    200 : #f58e96,
+    300 : #f0616b,
+    400 : #ed3f4c,
+    500 : #ea1d2c,
+    600 : #e71a27,
+    700 : #e41521,
+    800 : #e1111b,
+    900 : #db0a10,
+    A100 : #ffffff,
+    A200 : #ffd2d3,
+    A400 : #ff9fa1,
+    A700 : #ff8588,
+    contrast: (
+        50 : #222a2e,
+        100 : #222a2e,
+        200 : #222a2e,
+        300 : #222a2e,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #222a2e,
+        A200 : #222a2e,
+        A400 : #222a2e,
+        A700 : #222a2e,
+    )
+);
+
+$mat-theme-ignore-duplication-warnings: true;
+
+$ifood-grey: (
+    50 : #f6f8f9,
+    100 : #eaedf0,
+    200 : #dce1e6,
+    300 : #cdd4db,
+    400 : #c3cbd4,
+    500 : #b8c2cc,
+    600 : #b1bcc7,
+    700 : #a8b4c0,
+    800 : #a0acb9,
+    900 : #919fad,
+    A100 : #717171,
+    A200 : #606f7b,
+    A400 : #3d4852,
+    A700 : #222a2e,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$primary: mat-palette($ifood-red);
+$accent: mat-palette($ifood-red);
+$theme: mat-light-theme((color: (primary: $primary, accent: $accent)));
+@include angular-material-theme($theme);

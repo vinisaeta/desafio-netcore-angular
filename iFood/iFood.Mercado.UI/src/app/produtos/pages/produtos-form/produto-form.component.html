@@ -1,0 +1,76 @@
+<main>
+    <form #f="ngForm" (ngSubmit)="salvar()" action="">
+
+        <!-- CABEÇALHO -->
+        <i-header icon="market" [title]="novo ? 'Novo Produto' : 'Editar Produto'">
+            <i-header-subtitle>
+                <span>Início / Produtos / {{ novo ? 'Novo Produto' : 'Editar Produto' }}</span>
+            </i-header-subtitle>
+            <i-header-content>
+                <button type="button" (click)="voltar()" class="i-button-secondary">Voltar</button>
+                <button type="button" (click)="remover()" class="i-button-secondary" *ngIf="!novo">Remover</button>
+                <button class="i-button-primary" type="submit" color="primary" [disabled]="f.invalid">Salvar</button>
+            </i-header-content>
+        </i-header>
+        <!--/ CABEÇALHO -->
+
+        <mat-divider></mat-divider>
+
+        <section>
+
+            <div class="form-fields">
+                <i-form-field label="Nome do Produto" [mandatory]="true">
+                    <input name="nome" type="text" #nome="ngModel" [(ngModel)]="produto.nome" required maxlength="300">
+                    <i-error [control]="nome">
+                        <i-error-message type="required" message="Informe o nome do produto">
+                        </i-error-message>
+                    </i-error>
+                </i-form-field>
+
+                <i-form-field label="Valor de Venda (R$)" [mandatory]="true">
+                    <input name="valor" type="number" #valor="ngModel" [(ngModel)]="produto.valorDeVenda" required class="preco">
+                    <i-error [control]="valor">
+                        <i-error-message type="required" message="Informe o valor de venda do produto">
+                        </i-error-message>
+                        <i-error-message type="gt" message="Informe o valor maior que zero">
+                        </i-error-message>
+                        <i-error-message type="lt" message="Informe o valor menor que 99.999.999">
+                        </i-error-message>
+                    </i-error>
+                </i-form-field>
+            </div>
+
+            <div class="file-upload">
+                <div class="container-upload" (click)="file.click()" *ngIf="produto.imagem == null">
+                    <div class="thumbnail">
+                        <mat-icon svgIcon="image"></mat-icon>
+                    </div>
+                    <p>Clique aqui para selecionar uma imagem</p>
+                </div>
+                <img [src]="produto.imagem" alt="Imagem do Produto" *ngIf="produto.imagem != null">
+                <input #file type="file" accept='image/*' (change)="carregarImagem(file.files)" id="file-upload-field">
+                <div class="image-bar" *ngIf="produto.imagem != null">
+
+                    <button type="button" (click)="apagarImagem()">
+                        <mat-icon svgIcon="trash"></mat-icon>
+                    </button>
+
+                    <button type="button" (click)="file.click()">
+                        <mat-icon svgIcon="image"></mat-icon>
+                    </button>
+
+                </div>
+            </div>
+
+        </section>
+
+        <div id="menu-mobile">
+            <button class="i-button-primary" type="submit" color="primary" [disabled]="f.invalid">Salvar</button>
+            <button type="button" (click)="remover()" class="i-button-secondary" *ngIf="!novo">Remover</button>
+            <button type="button" (click)="voltar()" class="i-button-secondary">Voltar</button>
+        </div>
+
+
+    </form>
+
+</main>
