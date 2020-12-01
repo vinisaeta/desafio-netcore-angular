@@ -21,7 +21,7 @@ O desafio foi implementado como solicitado nos requisitos pedidos. Entendo que o
 - **Armazenamento de Imagem:** Acredito que a forma mais adequada para armazenamento de imagens seja através de serviços de Storages como ```S3``` e ```Azure Blob Storage``` por exemplo. 
 - **Modelos de Escrita e Leitura:** Como o cenário do desafio era algo bem simples, a estratégia de separar em modelo de escrita e leitura não foi adotada. Entretanto em cenários mais complexos na qual se tenha múltiplas visões de uma única informação, vale adotar a estratégia para melhorar segregação de código e ganho de performance.
 - **Async/Await:** Vale destacar que para aplicações que possuam grande volume de acesso, o uso de ```Async``` e ```Await``` trará ganho de performnace. O mesmo não foi usado no desafio devido a natureza do exercício.
-- **Swagger:** Não foi solicitado, poré está disponível na rota ```/swagger``` a documentacao sa API implementada.
+- **Swagger:** Não foi solicitado, porém está disponível a documentação da API do Desafio, através da rota```/swagger```.
 
 
 ## Screenshots
