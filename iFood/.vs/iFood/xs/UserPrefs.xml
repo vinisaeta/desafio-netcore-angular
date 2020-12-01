@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{C027DA21-E8AE-464D-A477-5A91AAE4888B}|Default">
+  <MonoDevelop.Ide.ItemProperties.iFood.Mercado.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="iFood.Mercado.API/appsettings.json">
+    <Files>
+      <File FileName="iFood.Mercado.Infrastructure/Persistence/Extensions/QueryableExtensions.cs" Line="11" Column="1" />
+      <File FileName="iFood.Mercado.API/appsettings.json" Line="11" Column="90" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="iFood" expanded="True">
+            <Node name="iFood.Mercado.API" expanded="True">
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+            <Node name="iFood.Mercado.Infrastructure" expanded="True">
+              <Node name="Persistence" expanded="True">
+                <Node name="Extensions" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

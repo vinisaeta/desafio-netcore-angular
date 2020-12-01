@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
     public usuario: any = {
-        login: '11234567890',
-        senha: '09876543211'
+
     };
 
     constructor(private auth: Auth, private router: Router) { }
