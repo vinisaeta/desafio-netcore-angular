@@ -14,7 +14,7 @@ Para desenvolver o desafio foram usados os seguintes recursos:
 - IDE: Visual Studio fo Mac e Visual Studio Code
 - Banco de Dados: SQL Server rodando em Docker
 
-## Considerações Técnicas?
+## Considerações Técnicas
 O desafio foi implementado como solicitado nos requisitos pedidos. Entendo que os requisitos foram simplificados para não tornar o desafio maior que o necessário, porém gostaria de registrar algumas alternativas ou estratégias a serem adotadas em cenários reais:
 - **Autenticação:** A abordagem mais adequada para os cenários de SPA com uma WEB API seria o uso de um ```Token JWT``` ao invés de ```HTTP Basic Authentication```.
 - **Notification Pattern:** Devido a simplicidade do contexto fiz uso de exceções para validação de domínio, porém em cenários mais complexos é interessante substituir esse tipo de estrégia pelo padrão Notification Pattern, visto que o lançamento de exceção de forma indiscriminada, e em grande escala de usuários, pode afetar a performance da aplicação.
