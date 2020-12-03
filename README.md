@@ -8,7 +8,7 @@ Desafio técnico que visava implementar um back end usando .Net Core e um front 
 Em seguida basta roda o projeto iFood.Mercado.API que automaticamente irá subir uma versão já deployada do front end da aplicação;
 
 
-## Ambiente de desenvolvimento utilizado?
+## Ambiente de desenvolvimento utilizado
 Para desenvolver o desafio foram usados os seguintes recursos:
 - Sistema Operacional: MacOS Mojave
 - IDE: Visual Studio fo Mac e Visual Studio Code
